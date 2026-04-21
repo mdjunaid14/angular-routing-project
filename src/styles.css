@@ -1,0 +1,117 @@
+/* ============================================
+   NEXUS DASHBOARD — Global Styles
+   Aesthetic: Industrial Brutalist + Neon Pulse
+   ============================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-void: #080a0f;
+  --bg-surface: #0d1117;
+  --bg-raised: #161b25;
+  --bg-card: #1a2033;
+  --border: #242d42;
+  --border-bright: #2e3a55;
+
+  --accent-cyan: #00e5ff;
+  --accent-green: #39ff14;
+  --accent-amber: #ffb700;
+  --accent-red: #ff3860;
+  --accent-purple: #bf5af2;
+
+  --text-primary: #e8edf5;
+  --text-secondary: #7a8aa0;
+  --text-muted: #3d4a5c;
+
+  --font-display: 'Syne', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --glow-cyan: 0 0 20px rgba(0, 229, 255, 0.25);
+  --glow-green: 0 0 20px rgba(57, 255, 20, 0.2);
+  --glow-amber: 0 0 20px rgba(255, 183, 0, 0.2);
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-mono);
+  background: var(--bg-void);
+  color: var(--text-primary);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-surface); }
+::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-cyan); }
+
+/* Utility Classes */
+.mono { font-family: var(--font-mono); }
+.display { font-family: var(--font-display); }
+
+/* Grid noise overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,229,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,229,255,0.015) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Tag badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-size: 10px;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.badge-cyan { background: rgba(0,229,255,0.12); color: var(--accent-cyan); border: 1px solid rgba(0,229,255,0.25); }
+.badge-green { background: rgba(57,255,20,0.1); color: var(--accent-green); border: 1px solid rgba(57,255,20,0.2); }
+.badge-amber { background: rgba(255,183,0,0.1); color: var(--accent-amber); border: 1px solid rgba(255,183,0,0.2); }
+.badge-red { background: rgba(255,56,96,0.1); color: var(--accent-red); border: 1px solid rgba(255,56,96,0.2); }
+.badge-purple { background: rgba(191,90,242,0.1); color: var(--accent-purple); border: 1px solid rgba(191,90,242,0.2); }
+
+/* Animations */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fade-up {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
