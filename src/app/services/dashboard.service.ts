@@ -9,7 +9,7 @@ export class DashboardService {
   private _tasks = signal<Task[]>([
     {
       id: 't1', title: 'API Gateway Migration', description: 'Migrate legacy endpoints to new GraphQL gateway',
-      status: 'in-progress', priority: 'critical', assignee: 'A. Reyes', dueDate: '2026-04-18',
+      status: 'in-progress', priority: 'critical', assignee: 'Junaid', dueDate: '2026-04-18',
       tags: ['backend', 'infra'], progress: 64
     },
     {
@@ -34,7 +34,7 @@ export class DashboardService {
     },
     {
       id: 't6', title: 'Terraform State Refactor', description: 'Split monolithic state into per-service workspaces',
-      status: 'todo', priority: 'low', assignee: 'A. Reyes', dueDate: '2026-05-05',
+      status: 'todo', priority: 'low', assignee: 'Junaid', dueDate: '2026-05-05',
       tags: ['infra', 'devops'], progress: 0
     },
   ]);

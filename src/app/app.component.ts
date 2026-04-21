@@ -47,7 +47,7 @@ import { TaskStatus } from './models/dashboard.models';
               <!-- Welcome bar -->
               <div class="welcome-bar">
                 <div>
-                  <div class="welcome-title">Good morning, <span class="accent">A. Reyes</span></div>
+                  <div class="welcome-title">Good morning, <span class="accent">Junaid</span></div>
                   <div class="welcome-sub">{{ today }} · Sprint 22 · 12 days left</div>
                 </div>
                 <button class="add-task-btn" (click)="showAddTask = !showAddTask">
@@ -61,7 +61,7 @@ import { TaskStatus } from './models/dashboard.models';
                   <div class="form-row">
                     <input #titleInput type="text" placeholder="Task title..." class="form-input" />
                     <select #assigneeInput class="form-select">
-                      <option value="A. Reyes">A. Reyes</option>
+                      <option value="Junaid">Junaid</option>
                       <option value="P. Chen">P. Chen</option>
                       <option value="J. Müller">J. Müller</option>
                       <option value="S. Patel">S. Patel</option>

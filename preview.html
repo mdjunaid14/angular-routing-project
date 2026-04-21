@@ -330,12 +330,12 @@ const S = {
 };
 
 const tasks = [
-  {id:"t1",title:"API Gateway Migration",status:"in-progress",priority:"critical",assignee:"A. Reyes",due:"2026-04-18",tags:["backend","infra"],prog:64},
+  {id:"t1",title:"API Gateway Migration",status:"in-progress",priority:"critical",assignee:"Junaid",due:"2026-04-18",tags:["backend","infra"],prog:64},
   {id:"t2",title:"Design System Tokens",status:"done",priority:"medium",assignee:"P. Chen",due:"2026-04-10",tags:["design","ui"],prog:100},
   {id:"t3",title:"Auth Service Hardening",status:"todo",priority:"high",assignee:"J. Müller",due:"2026-04-25",tags:["security"],prog:0},
   {id:"t4",title:"Real-time Analytics Pipeline",status:"in-progress",priority:"high",assignee:"S. Patel",due:"2026-04-22",tags:["data","backend"],prog:38},
   {id:"t5",title:"Mobile PWA Audit",status:"blocked",priority:"medium",assignee:"L. Nakamura",due:"2026-04-30",tags:["frontend","mobile"],prog:20},
-  {id:"t6",title:"Terraform State Refactor",status:"todo",priority:"low",assignee:"A. Reyes",due:"2026-05-05",tags:["infra","devops"],prog:0},
+  {id:"t6",title:"Terraform State Refactor",status:"todo",priority:"low",assignee:"Junaid",due:"2026-05-05",tags:["infra","devops"],prog:0},
 ];
 
 const notifs = [
@@ -501,7 +501,7 @@ function overviewHTML(){
   const fil=["all","in-progress","todo","done","blocked"];
   const ft=S.dashFilter==="all"?tasks:tasks.filter(t=>t.status===S.dashFilter);
   return `<div class="page">
-  <div class="wb"><div><div class="wt">Good morning, <span class="acc">${S.auth?S.auth.fn+" "+S.auth.ln:"A. Reyes"}</span></div>
+  <div class="wb"><div><div class="wt">Good morning, <span class="acc">${S.auth?S.auth.fn+" "+S.auth.ln:"Junaid"}</span></div>
   <div class="ws">${new Date().toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"})} · Sprint 22</div></div>
   <button class="add-b">+ NEW TASK</button></div>
   <div class="sg">${stats.map((s,i)=>`<div class="sc ${s.c}" style="animation-delay:${i*.08}s">

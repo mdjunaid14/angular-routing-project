@@ -63,7 +63,7 @@ import { NavItem } from '../../models/dashboard.models';
       <div class="sidebar-user">
         <div class="user-avatar">AR</div>
         <div class="user-info">
-          <div class="user-name">A. Reyes</div>
+          <div class="user-name">Junaid</div>
           <div class="user-role">Admin</div>
         </div>
         <span class="user-status-dot"></span>

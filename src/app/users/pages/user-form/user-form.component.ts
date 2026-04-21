@@ -251,7 +251,7 @@ function phoneFormat(control: AbstractControl): ValidationErrors | null {
               @if (fc['role'].value) {
                 <div class="role-preview">
                   <span class="preview-label">Preview:</span>
-                  <app-role-badge [role]="fc['role'].value" type="role"></app-role-badge>
+                  <app-role-badge [role]="selectedRole" type="role"></app-role-badge>
                 </div>
               }
             </div>
@@ -367,6 +367,7 @@ export class UserFormComponent implements OnInit {
   get fc()    { return this.userForm.controls; }
   get fc_pw() { return (this.userForm.get('passwords') as FormGroup).controls; }
   get pwGroup() { return this.userForm.get('passwords'); }
+  get selectedRole(): UserRole { return this.fc['role'].value as UserRole; }
 
   ngOnInit() {
     this.userId = this.route.snapshot.params['id'];
